@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" />
+  <arg name="gui" default="False" />
+  <param name="robot_description" textfile="/home/varun/catkin_ws/src/robot1_description/urdf/dae.urdf" />
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz"/>
+    <param name="use_gui" value="True" />
+</launch>
